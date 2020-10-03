@@ -1,79 +1,91 @@
-const num1 = 100;
-const num2 = 50;
+const firstName = "William"
+const lastName = "Johnson"
+const age = 28
+sentence = "Good morning everyone in javascript."
 
-let val;
+let wholename;
+wholename = firstName + lastName
+console.log("wholename = ",wholename)
 
-console.log("--------- Very simple math with numbers ---------")
+let cleanConcatination;
+cleanConcatination = firstName + ' ' + lastName
+console.log("cleanConcatination = ",cleanConcatination)
 
-console.log(" Here we are runnig ")
-console.log("num1 = ", num1)
-console.log("num2 = ", num2)
-console.log("---- val = num1 + num1 ---")
-val = num1 + num1
-console.log("---- console.log(val) >> OutPuts :", val)
+appendedName = 'Bob';
+appendedName += ' Smith';
+console.log("appendedName = ",appendedName)
+
+
+greeting = 'Hello, my name is ' + firstName + ' amd i am ' + age;
+console.log(greeting)
+
+
+console.log("----------- Escapeing-------- //// ")
+console.log()
+console.log("When you want ot use a quotation you may need to escape it so it is no run by the computer")
 console.log()
 
-console.log(" Here we are runnig ")
-console.log("---- val = num1 * num1 ---")
-val = num1 * num2
-console.log("---- console.log(val) >> OutPuts :", val)
+stringWithEscapedQuote = 'That\'s awsome, I can\'t wait'
+console.log(stringWithEscapedQuote)
 console.log()
 
-console.log(" Here we are runnig ")
-console.log("---- val = num1 - num1 ---")
-val = num1 - num2
-console.log("---- console.log(val) >> OutPuts :", val)
+console.log("----- Length ------")
+console.log("firstName.length = ",firstName.length)
 console.log()
 
-console.log(" Here we are runnig ")
-console.log("---- val = num1 / num1 ---")
-val = num1 / num2
-console.log("---- console.log(val) >> OutPuts :", val)
+console.log("----- Concatinate w ------")
+console.log("firstName.concat(' ', lastName) = ",firstName.concat(' ', lastName))
 console.log()
 
-console.log(" Here we are runnig ")
-console.log("---- val = num1 % num1 ---")
-val = num1 & num2
-console.log("---- console.log(val) >> OutPuts :", val)
+console.log("----- toUpperCase() ------")
+console.log("firstName.toUpperCase() = ",firstName.toUpperCase())
 console.log()
 
+console.log("----- toLowerCase() ------")
+console.log("firstName.toLowerCase() = ",firstName.toLowerCase())
 console.log()
+
+console.log("----- Indexing Strings ------")
+console.log("firstName[0] = ",firstName[0])
+console.log("firstName[1] = ",firstName[1])
+console.log("firstName[2] = ",firstName[2])
 console.log()
 
-console.log("----- The Math Object -----")
+console.log("----- indexOf ------")
+console.log("firstName.indexOf('l') = ",firstName.indexOf('l'))
+console.log("firstName.lastIndexOf('l') = ",firstName.lastIndexOf('l'))
+console.log("firstName.indexOf('x') = ",firstName.indexOf('x'))
+console.log()
 
-val = Math.PI;
-console.log(val)
+console.log("----- char ------")
+console.log("firstName.charAt(2) = ",firstName.charAt(2))
+console.log("firstName.charAt(5) = ",firstName.charAt(5))
+console.log("firstName.charAt(6) = ",firstName.charAt(6))
+console.log()
 
-val = Math.E;
-console.log(val)
+console.log("----- To get the last char ------")
+console.log("firstName.charAt(firstName.length - 1) = ",firstName.charAt(firstName.length - 1))
+console.log()
 
-val = Math.round(2.4);
-console.log(val)
+console.log("----- To get sub-strings  ------")
+console.log("firstName.substring(0,4) = ",firstName.substring(0,4))
+console.log()
 
-val = Math.ceil(2.4);
-console.log(val)
+console.log("----- Slices ------")
+console.log("firstName.slice(0,4) = ",firstName.slice(0,4))
+console.log("firstName.slice(-3) = ",firstName.slice(-3))
+console.log()
 
-val = Math.floor(2.8);
-console.log(val)
+console.log("----- Split ------")
+console.log("sentence.split(' ') = ",sentence.split(' '))
+console.log("sentence.split('o') = ",sentence.split('o'))
+console.log()
 
-val = Math.abs(-3);
-console.log(val)
+console.log("----- replace ------")
+console.log("sentence.replace('morning','EVENING') = ",sentence.replace('morning','EVENING'))
+console.log()
 
-val = Math.pow(8,2);
-console.log(val)
-
-val = Math.sqrt(64);
-console.log(val)
-
-val = Math.min(2,33,4,1,55,6,3,-2);
-console.log(val)
-
-val = Math.max(2,33,4,1,55,6,3,-2);
-console.log(val)
-
-val = Math.random();
-console.log(val)
-
-val = Math.floor(Math.random() * 20 + 1); 
-console.log(val)
+console.log("----- replace ------")
+console.log("sentence.includes('Good' = ",sentence.includes('Good'))
+console.log("sentence.includes('wasp' = ",sentence.includes('wasp'))
+console.log()
