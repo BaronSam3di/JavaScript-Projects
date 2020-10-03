@@ -1,4 +1,4 @@
-# JavaScript-Projecs
+# JavaScript-Projects
 
 VScode plugins Installed
 - liveserver 
