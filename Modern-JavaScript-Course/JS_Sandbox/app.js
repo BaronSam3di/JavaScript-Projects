@@ -1,1 +1,0 @@
-console.log("----- Arrays and Array methods------")
