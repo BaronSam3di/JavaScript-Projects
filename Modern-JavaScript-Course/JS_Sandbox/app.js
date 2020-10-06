@@ -1,42 +1,44 @@
-console.log(" -------- Object literals Reference types")
+console.log("------ Switches -------")
 
-const person = {    // this defines an object literal
-    firstName : 'Steve',
-    lastName : ' Smith',
-    age : 30,
-    email : 'steve@aol.com',
-    hobbies: ['music','sports'],
-    address: {
-        city: 'London',
-        postcode:'EC1Y 9JM'
-    },
+const colour = 'red'
 
-    getBirthYear: function(){
-        return 2020 - this.age; // the keyword "this" pertains to the object that you are in atm
-    }
+console.log(" Switch is best used when ther eis allot of different cases and needs a default ")
+switch(colour){
+    case 'red' :
+        console.log(' Colour is Red')
+        break
+    case 'blue' :
+        console.log(' Colour is Blue')
+        break
+    default :
+        console.log(' Colour is not set')
+        break
+}
+let day;
 
+// set up different cases fpr the switch
+switch(new Date().getDay()){
+    case 0:
+        day = 'Sunday';
+        break
+    case 1:
+        day = 'Monday';
+        break  
+    case 2:
+        day = 'Tuesday';
+        break  
+    case 3:
+        day = 'Wednesday';
+        break  
+    case 4:
+        day = 'Thursday';
+        break  
+    case 5:
+        day = 'Friday';
+        break  
+    case 6:
+        day = 'Saturday';
+        break   
 }
 
-
-
-let val;
-val = person;
-console.log("------ The whole object –------")
-console.log("console.log(person) = ", person)
-
-console.log("------ Just one attribute of the Object  –------")
-console.log("console.log(person['firstName']) = ", person['firstName'])
-console.log("console.log(person.firstName) = ", person.firstName)
-
-console.log(person.address)
-console.log(person.getBirthYear()) 
-
-const people = [
-    {name: 'Alice', age : 30},
-    {name: 'Bob', age : 97},
-    {name: 'Charlie', age : 12}
-];
-
-for(let index = 0; index < people.length; index++){
-    console.log(people[index].name)
-}
+console.log(`Today is ${day}`)
