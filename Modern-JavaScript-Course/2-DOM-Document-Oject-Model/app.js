@@ -1,42 +1,24 @@
-/*
-The Document Object Model is a model. It describes the tree of nodes and elements created by the browser.
-Javascript can be used to read/write/manipulate to the the DOM.
-It gives an object orientated Representation
-*/
+console.log("Now we will look at DOM (Document Object Model) selectors")
+console.log();
+console.log("Single Elelment selectors will allow you to grab an element by its id or class or whater, but it will only grab the 1st one")
+console.log();
+console.log("Multiple Element sleecotrs can be used to grab groups of them")
+console.log();
+console.log(document.getElementById('task-title'))
 
-let val;
-val = document;
+// get things from the element , examples below
+console.log(document.getElementById('task-title').id);
+console.log(document.getElementById('task-title').className);
 
-console.log("ther a re different structures. HTML collection formatted like an array but isn't quite the same, nut you cannot do things like use an iterative list like a forEach")
-val = document.all;
-val = document.all[2] // here we can idex parts of the DOM
+// change styling
+document.getElementById('task-title').style.background = '#333'; // notice the change in the element
+document.getElementById('task-title').style.colour = '#fff';
+document.getElementById('task-title').style.padding = '5px';
 
-val = document.all.length;
-val = document.head;
-val = document.body;
-val = document.domain;
-val = document.URL;
 
-console.log(" You can select stuff without using selectors")
-console.log()
-val = document.forms[0].id;
-val = document.forms[0].method;
-val = document.forms[0].action;
+// change content
+document.getElementById('task-title').textContent = 'Task List'; // notice the change in the element
+document.getElementById('task-title').innerText = 'My Tasks';
+document.getElementById('task-title').innerHTML = '<span style="color:red">Task List</span>' // change the colour of the text 
 
-val = document.links;
-val = document.links[0];
-val = document.links[0].className;
-val = document.links[0].classList;
-val = document.images;
-val = document.scripts;     // Could this could be where there is some security holes?
-val = document.scripts[2].getAttribute('src');
-
-// Listing all the scripts in the DOM
-let scripts = document.scripts; // we need to define them as an object
-let scriptsArray = Array.from(scripts); // we then need to put them to an Array so we can iterate over them
-
-scriptsArray.forEach(function(script){ // Now we can run the forEach method
-    console.log(script.getAttribute('src'));
-});
-
-console.log(val)
+// ---------- Continue from 8:22 ----------
