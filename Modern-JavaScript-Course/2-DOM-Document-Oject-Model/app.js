@@ -1,47 +1,46 @@
-console.log("--- Event with the UI ----- ");
-//  // ----- Unnamed FUNCTION in a button
-// document.querySelector('.clear-tasks').addEventListener('click', 
-// function(someVariable){
-//     // Here eis where we put the functionality when we click
-//     // -- Note to get this to persist on the console we need to add a # to the href on link 65 of the index.html
-//     console.log("----- -You pressed the button ------")
-//     // Instead of a hash symbol on the index.html, if we placed a link to a website it would redirect. we can stop this default behaviour with the line below 
-//     someVariable.preventDefault();
-    
-// });
+console.log("----- Keyboard and input events -----")
 
-// Clear task button
-document.querySelector('.clear-tasks').addEventListener('click', myClickFunction);
+const form = document.querySelector('form');// big applications will need something more specific than form , uch as class or ID
+const taskInput = document.getElementById('task');
+const heading = document.querySelector('h5'); 
+// --- Clear input
+taskInput.value = '';
 
-function myClickFunction(event){
-    console.log("You clicked")
+//  form.addEventListener('submit', runEvent);
+
+
+// // --- Key down
+// taskInput.addEventListener('keydown', runEvent); // will catch the press of any key on the keyboard
+
+// // --- Key up
+// taskInput.addEventListener('keyup', runEvent); // will catch the lifting of any key on the keyboard
+
+// // --- Key press
+// taskInput.addEventListener('keypress', runEvent); // will catch the pressing of any key on the keyboard
+
+// // --- Cut
+// taskInput.addEventListener('cut', runEvent); // will catch the lifting of any key on the keyboard
+
+// // ---- Paste
+// taskInput.addEventListener('paste', runEvent); // will catch the pressing of any key on the keyboard
+
+// // --- focus
+// taskInput.addEventListener('focus', runEvent);
+
+// // --- blur
+// taskInput.addEventListener('blur', runEvent);
+
+function runEvent(event){
+    console.log(`Event Type: ${event.type}`);
+    console.log(event.target.value);
+    heading.innerText = event.target.value;
+
+
+    // console.log(taskInput.value); // will print the new task name
+    event.preventDefault(); // this will prevent he default value
+
+
+
 }
 
-// Add Task
-document.querySelector('.clear-tasks').addEventListener('click', myClickFunction);
-
-function myClickFunction(event){
-    let val;
-    val = event;
-    val = event.target.id;
-    val = event.target.className; 
-    val = event.target.classList;  
-    event.target.innerText = "Boom"
-
-    // Event type
-    val = event.type;// try changieng click on line 14 to mouseover
-
-    // Get the timestamp
-    val = event.timeStamp
-
-    // Get hte coords evebt relative to the window
-    val = event.clientY;
-    val = event.clientX;
-
-    // Get the coords evebt relative to the window
-    val = event.offsetY;
-    val = event.offsetX;
-
-
-    console.log("You clicked and got val =",val)
-}
+// --- adding action="index.php" to line 22 of the index.php
